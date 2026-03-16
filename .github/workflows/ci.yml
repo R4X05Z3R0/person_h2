@@ -12,5 +12,12 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
+
+      - name: Set Up Java 21
+        uses: actions/setup-java@v4
+        with:
+          distribution: "temurin"
+          java-version: '21'
+
       - name: Running Tests
         run: mvn test
